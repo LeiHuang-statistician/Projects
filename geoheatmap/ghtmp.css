@@ -41,10 +41,10 @@
 }
 #tiltext{font-size:1.5rem;padding:auto;  text-align: center;}
 
-#download{
+.download{
     position:absolute;
     display: inline-block;
-    top:80%;
+    top:75%;
     bottom: 0px;
     width:15%;
     height:5%;
@@ -58,12 +58,24 @@
     text-align: center;
 }
 
+#download2{
+  top:85%;
+  background-color: rgb(205, 211, 249);;
+}
+
 #download:hover {
     background-color: rgb(171, 157, 227);
     border-color: rgb(221, 198, 198);
     padding:auto;
 
     }
+
+#download2:hover {
+      background-color: rgb(171, 157, 227);
+      border-color: rgb(221, 198, 198);
+      padding:auto;
+  
+      }
 #sidebar {
  position:absolute;
   margin-top: 5%;
@@ -114,6 +126,3 @@
   stroke-linecap: round;
   pointer-events: none;
 }
-
-
-
