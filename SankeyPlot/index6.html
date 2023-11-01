@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script  src="https://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+</head>
+<style>
+#sidebar {
+position: absolute;
+  margin-top: 10%;
+  margin-left:60%;
+  height: 45%;
+  width: 10%;
+  border: 1px solid #5ba545;
+  /* border: 1px solid #f1f4f1; */
+  border-radius: 25px;
+}
+.colordiv {
+ margin-top: 15px;
+ margin-left:30px;
+ height: 30px;
+}
+.colorb {
+ display: block;
+ margin-top: 15px;
+ margin-left:20px;
+ height: 30px;
+ width: 100px;
+ border-radius: 10px;
+ background-color: white;
+ cursor: pointer;
+}
+.colorb:hover {
+  background-color: #d7fadf;
+}
+
+</style>
+<body>
+
+
+<div id="sidebar">
+        <div class="colordiv"><b><em>Outcomes</em></b></div>
+        <button class="colorb" id="ob1" >ALL</button>
+        <button class="colorb" id="ob2" >MI</button>
+        <button class="colorb" id="ob3">HF</button>
+        <button class="colorb" id="ob4">Stroke</button>
+</div>
+<button style="position:absolute;  right:60%;top:90%;"onClick=download()>Download as PNG</button>
+<script src="scratch.js"></script>
+<script src="script6.js"></script>
+
+</body>
+</html>
