@@ -78,10 +78,16 @@ function d3sankey() {
     };
 
    function computeAbsolutePositions() {
-//      nodes[5].x = 850;
-     nodes[5].y = 330;
-//    nodes[4].x = 256.5;
-    nodes[4].y = 380;
+
+   nodes[0].y = 10;
+   nodes[3].y = 0;
+   nodes[2].y = nodes[3].dy+20;
+   nodes[1].y = nodes[2].y+nodes[2].dy+20;
+// nodes[5].x = 850;
+   nodes[6].y = 0;
+   nodes[5].y = nodes[6].dy+20;
+// nodes[4].x = 256.5;
+   nodes[4].y = nodes[5].y+nodes[5].dy+20;
    };
 
     // Populate the sourceLinks and targetLinks for each node.
@@ -305,6 +311,14 @@ function d3sankey() {
     return sankey;
 };
 
+printToCart2=()=>{
+    let popupWinindow;
+    let innerContents =$('<div>').append($('#sankeysvg').clone()).html();
+    popupWinindow = window.open();
+    popupWinindow.document.open();
+    popupWinindow.document.write('<body onload="window.print()">' + innerContents );
+    popupWinindow.document.close();
+  }
 
 const download = () => {
   // fetch SVG-rendered image as a blob object
@@ -313,7 +327,6 @@ const download = () => {
   const svgBlob = new Blob([data], {
     type: 'image/svg+xml;charset=utf-8'
   });
-
 
   // convert the blob object to a dedicated URL
   const url = URL.createObjectURL(svgBlob);
@@ -529,60 +542,7 @@ node.append("text")
             //.attr('dy', -10)
             .attr('transform',(d,i)=> `translate( 300,-20)`)
 
-//textgdata=[{"name":"Visit 1", "x":-5,"y":350},
-//            {"name":"Visit 2", "x":120,"y":350},
-//             {"name":"Visit 3", "x":245,"y":350},
-//              {"name":"Visit 4", "x":370,"y":350},
-//               {"name":"Visit 5", "x":870,"y":350},
-//           ]
-//
-//var drag=d3.behavior.drag()
-//    .origin(Object)
-//    .on("dragstart",dragtextstart)
-//    .on("dragend",dragtextend)
-//    .on("drag",dragtextmove)
 
-//
-//textg=svg.selectAll('.textg').data(textgdata)
-//      .enter()
-//      .append("text")
-//      .attr("class",'visit' )
-//      .attr("x", d=>d.x)
-//      .attr("y", d=>d.y)
-//      .attr("dy", ".35em")
-//      .text(d=>d.name)
-//      .attr("font-weight", 700)
-//      .style('font-size',lgsize)
-//      .style('cursor', 'pointer')
-//      .call(drag)
-//
-//
-// legendata=[{"label":"Normal", "color":"green", "x":300},
-//            {"label":"Above Normal", "color":"red","x":450},
-//            {"label":"Missing", "color":"blue", "x":650},
-//           ]
-// svg.append('g').selectAll('.legendg')
-//  .data(legendata)
-//  .enter()
-//  .append("rect")
-//    .attr("height", 20)
-//    .attr("width", 20)
-//    .style("fill", d=>d.color)
-//    .attr("x", d=>d.x)
-//    .attr("y", 400)
-
-
-//  svg.selectAll("mylabels")
-//  .data(legendata)
-//  .enter()
-//  .append("text")
-//    .attr("x", d=>d.x+30)
-//    .attr("y", 410)
-//    .text(d=>d.label)
-//    .attr("text-anchor", "left")
-//    .style("alignment-baseline", "middle")
-//    .attr("font-weight", 700)
-//    .style('font-size',lgsize)
 
     function dragmove(d) {
     d3.select(this).attr("transform",
