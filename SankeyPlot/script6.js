@@ -155,7 +155,7 @@ $("#ob3").click(function() {
 
 $("#ob4").click(function() {
   $("#sankeysvg").remove();
-  dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_stroke.csv"
+  dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_Stroke.csv"
   graph()
 });
 
