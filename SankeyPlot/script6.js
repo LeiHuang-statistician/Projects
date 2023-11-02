@@ -103,7 +103,7 @@ function graph(){
            return true;
         });
 
-        nodescolor=['blue','red','yellow','green','red','yellow','green']
+        nodescolor=['blue','red','orange','green','red','orange','green']
         i=0;
         nodes.forEach(function(item){
            item['color']=nodescolor[i]
@@ -129,35 +129,33 @@ function graph(){
         //console.log(graph)
         psize=15
         sankeygraph(graph,title)
-
-
     })
 }
-let dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_All.csv"
+let dtata="test_all.csv"
 graph()
 
 
 $("#ob1").click(function() {
   $("#sankeysvg").remove();
-  dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_All.csv"
+  dtata="test_all.csv"
   graph()
 });
 
 $("#ob2").click(function() {
   $("#sankeysvg").remove();
-  dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_MI.csv"
+  dtata="test_MI.csv"
   graph()
 });
 
 $("#ob3").click(function() {
   $("#sankeysvg").remove();
-  dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_HF.csv"
+  dtata="test_HF.csv"
   graph()
 });
 
 $("#ob4").click(function() {
   $("#sankeysvg").remove();
-  dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_Stroke.csv"
+  dtata="test_stroke.csv"
   graph()
 });
 
