@@ -16,51 +16,7 @@ var formatNumber = d3.format(",.0f"), // zero decimal places
     }//,
     //color = d3.scale.category20();
 
-//
-//psize=16
-//lgsize=20
-//plist=["100%","80.5%","19.2%","0.4%","61.7%","36.4%","2.0%","47.1%","52.2%","0.7%","15.0%","85.0%"]
-//sankeygraph()
-//
-// $(".rleg").keyup(function(){
-//   lgsize=this.value;
-//  $("#sankeysvg").remove();
-//  sankeygraph()
-//  });
-//
-//   $(".rpct").keyup(function(){
-//   psize=this.value;
-//  $("#sankeysvg").remove();
-//  sankeygraph()
-//  });
-//
-//function Geeks() {
-//            plist=[]
-//            var input = document.getElementsByName('array[]');
-//
-//            for (var i = 0; i < input.length; i++) {
-//                var a = input[i];
-//                plist.push(a.value) ;
-//            }
-//             $("#sankeysvg").remove();
-//            sankeygraph()
-//        }
-//
-//// the function for moving the nodes
-//
 
-
-//document.getElementById("dl-png").onclick=function(){
-//  const screeshotTarget=document.getElementById('sankeysvg')
-//  html2canvas(screeshotTarget).then((canvas)=>{
-//   const base64image=canvas.toDataURL("image/png");
-//   var anchor=document.creatElement('a')
-//   anchor.setAttribute("href",base64image)
-//   anchor.setAttribute("download","sankey.png")
-//   anchor.click();
-//   anchor.remove();
-//   });
-//}
 
 function graph(){
     d3.csv(
