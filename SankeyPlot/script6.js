@@ -131,31 +131,31 @@ function graph(){
         sankeygraph(graph,title)
     })
 }
-let dtata="test_all.csv"
+let dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_All.csv"
 graph()
 
 
 $("#ob1").click(function() {
   $("#sankeysvg").remove();
-  dtata="test_all.csv"
+  dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_All.csv"
   graph()
 });
 
 $("#ob2").click(function() {
   $("#sankeysvg").remove();
-  dtata="test_MI.csv"
+  dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_MI.csv"
   graph()
 });
 
 $("#ob3").click(function() {
   $("#sankeysvg").remove();
-  dtata="test_HF.csv"
+  dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_HF.csv"
   graph()
 });
 
 $("#ob4").click(function() {
   $("#sankeysvg").remove();
-  dtata="test_stroke.csv"
+  dtata="https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_Stroke.csv"
   graph()
 });
 
