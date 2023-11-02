@@ -78,16 +78,14 @@ function d3sankey() {
     };
 
    function computeAbsolutePositions() {
+   nodes[1].y = 0;
+   nodes[2].y = nodes[1].dy+20;
+   nodes[3].y = nodes[2].y+nodes[2].dy+20;
 
-   nodes[0].y = 10;
-   nodes[3].y = 0;
-   nodes[2].y = nodes[3].dy+20;
-   nodes[1].y = nodes[2].y+nodes[2].dy+20;
-// nodes[5].x = 850;
-   nodes[6].y = 0;
-   nodes[5].y = nodes[6].dy+20;
-// nodes[4].x = 256.5;
-   nodes[4].y = nodes[5].y+nodes[5].dy+20;
+   nodes[4].y = 0;
+   nodes[5].y = nodes[4].dy+20;
+   nodes[6].y = nodes[5].y+nodes[5].dy+20;
+
    };
 
     // Populate the sourceLinks and targetLinks for each node.
@@ -358,7 +356,6 @@ const download = () => {
 };
 
 function sankeygraph(graph){
-
 // append the svg canvas to the page
 var svg = d3.select("body").append("svg")
     .attr("id","sankeysvg")
@@ -511,6 +508,7 @@ node.append("text")
     .attr("y", function (d) {
         return d.dy / 2;
     })
+    .style('font-family','Helvetica')
     .attr("dy", ".35em")
     .attr("text-anchor", "end")
     .attr("text-shadow", "0 1px 0 #fff")
